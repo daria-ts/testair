@@ -48,29 +48,6 @@ module.exports = {
   
       },
     },
-    {
-      resolve: "gatsby-omni-font-loader",
-      options: {
-
-        mode: "async",
-    
-        /* Enable font loading listener to handle FOUT */
-        enableListener: true,
-    
-        /* Preconnect URL-s. This example is for Google Fonts */
-        preconnect: ["https://fonts.gstatic.com"],
-    
-        /* Self-hosted fonts config. Add font files and font CSS files to "static" folder */
-        custom: [
-          {
-            /* Exact name of the font as defied in @font-face CSS rule */
-            name: ["TurismoCF-Heavy", "TurismoCF-Medium"],
-            /* Path to the font CSS file inside the "static" folder with @font-face definition */
-            file: "/fonts/css/fonts.css",
-          },
-        ],
-      },
-    }
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

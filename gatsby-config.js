@@ -1,3 +1,10 @@
+require('dotenv').config({
+  path: `.env`
+}
+
+);
+const config = require('gatsby-plugin-config');
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -11,6 +18,20 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        
+        apiKey: process.env.AIRTABLE_API_KEY,
+        tables: [
+          {
+            baseId: `appIdpbS3NutGPzDp`,
+            tableName: `Tools`,
+          }
+        ]
+  
       },
     },
     `gatsby-transformer-sharp`,

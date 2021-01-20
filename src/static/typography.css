@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap');
+
+@font-face {
+    font-family: "TurismoCF-Heavy", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    src: local("TurismoCF-Heavy"),
+      url("/src/fonts/TurismoCF-Heavy.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "TurismoCF-Medium", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    src: local("TurismoCF-Medium"),
+      url("/src/fonts/TurismoCF-Medium.woff") format("woff");
+  }

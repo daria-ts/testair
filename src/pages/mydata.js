@@ -8,8 +8,8 @@ export const query = graphql`
     allAirtable(filter: {table: {eq: "Tools"}}) {
       nodes {
         data {
-          serviceName
-          slug
+          title
+          subtitle
           link
           description
           contentType

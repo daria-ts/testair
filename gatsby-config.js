@@ -59,7 +59,7 @@ module.exports = {
               maxWidth: 1200,
             },
         },
-        ]
+        ],
       },
     },
     {
@@ -72,7 +72,7 @@ module.exports = {
             baseId: `appIdpbS3NutGPzDp`,
             tableName: `Tools`,
           }
-        ]
+        ],
   
       },
     },

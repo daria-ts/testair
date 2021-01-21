@@ -35,6 +35,34 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extension: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+        },
+        ]
+      },
+    },
+    {
       resolve: `gatsby-source-airtable`,
       options: {
         
@@ -79,7 +107,7 @@ module.exports = {
             /* Exact name of the font as defied in @font-face CSS rule */
             name: ["TurismoCF-Heavy", "TurismoCF-Medium"],
             /* Path to the font CSS file inside the "static" folder with @font-face definition */
-            file: "/fonts/css/fonts.css",
+            file: "/static/fonts.css",
           },
         ],
       },

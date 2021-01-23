@@ -17,8 +17,8 @@ import mediaQueries from '/./src/themes/tokens/mediaQueries.js'
 import opacities from './src/themes/tokens/opacities.js'
 import zIndices from './src/themes/tokens/zIndices.js';
 
-body {
-    backgroundColor: '#f7fafc';
+body = {
+    backgroundColor: '#f7fafc'
   }
 
 

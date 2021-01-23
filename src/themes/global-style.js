@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import reset from "styled-reset"
+
 export const theme = {
   font: {
     head: '"TurismoCF-Heavy", sans-serif',
@@ -122,6 +123,5 @@ export const GlobalStyle = createGlobalStyle`
     line-height: ${({ theme }) => theme.lineHeights.lh150};
     letter-spacing: ${({ theme }) => theme.letterSpacings.normal};
     background-color: ${({ theme }) => theme.colors.white};
-    background-image: url(./pattern.svg);
   }
 `

@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import reset from 'styled-reset'
 import spacing from './src/themes/tokens/spacing.js'
 import colors from './src/themes/tokens/colors.js'
 import borderWidths from './src/themes/tokens/borderWidths.js'

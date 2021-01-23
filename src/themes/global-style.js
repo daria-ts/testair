@@ -2,6 +2,20 @@ import { createGlobalStyle } from "styled-components"
 import reset from "styled-reset"
 export const GlobalStyle = createGlobalStyle`
   ${reset}
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+  }
+  body {
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+
 `
 export const Theme = {
   fonts: {

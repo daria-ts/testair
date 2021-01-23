@@ -8,9 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Theme } from "../themes/global-style"
+import { GlobalStyle } from "../themes/global-style"
 import Header from "./header"
-import "./layout.css"
+//import "./layout.css"
 //mport { radii } from "./mixins/radii"
 
 const Layout = ({ children }) => {
@@ -34,6 +34,7 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
+        <GlobalStyle />
         <main>{children}</main>
         <footer
           style={{

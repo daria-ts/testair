@@ -120,6 +120,16 @@ module.exports = {
             file: "/static/fonts.css",
           },
         ],
+        /* Web fonts. File link should point to font CSS file. */
+        web: [
+          {
+            /* Exact name of the font as defied in @font-face CSS rule */
+            name: ["Ubuntu", "Ubuntu Mono"],
+            /* URL to the font CSS file with @font-face definition */
+            file:
+              "https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap",
+          },
+        ],
       },
     },
     `gatsby-plugin-styled-components`,

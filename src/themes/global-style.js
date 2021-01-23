@@ -113,12 +113,15 @@ export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: ${({ theme }) => theme.font.subhead};
-    font-size: 1rem;
+    //font-family: ${({ theme }) => theme.font.base};
+    font-size: ${({ theme }) => theme.fontSizes.base};
+    color: ${({ theme }) => theme.colors.black};
   
   }
   body {
-    line-height: 1.5;
-    letter-spacing: 0;
+    line-height: ${({ theme }) => theme.lineHeights.lh150};
+    letter-spacing: ${({ theme }) => theme.letterSpacings.normal};
+    background-color: ${({ theme }) => theme.colors.white};
+    background-image: url(./pattern.svg);
   }
 `

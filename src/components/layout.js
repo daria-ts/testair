@@ -9,8 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
-import ".src/components/tokens/colors.js"
-//import "./layout.css"
+import "./layout.css"
+import "./src/themes/theme.js"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -33,7 +33,6 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <GlobalStyle />
         <main>{children}</main>
         <footer
           style={{

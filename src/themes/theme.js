@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components"
+//import { createGlobalStyle } from "styled-components"
 // import reset from "styled-reset"
-export default {
+export const Theme = {
   fonts: {
     head: "Turismo CF 900, sans-serif",
     subhead: "Turismo CF 500, sans-serif",

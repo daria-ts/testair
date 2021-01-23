@@ -14,7 +14,7 @@ import easings from './src/themes/tokens/easings.js'
 import letterSpacings from './src/themes/tokens/letterSpacings.js'
 import mediaQueries from '/./src/themes/tokens/mediaQueries.js'
 import opacities from './src/themes/tokens/opacities.js'
-import zIndices from './src/themes/tokens/zIndices.js';
+import zIndices from './src/themes/tokens/zIndices.js'
 
 body = {
     backgroundColor: '#f7fafc'

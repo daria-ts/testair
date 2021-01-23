@@ -1,28 +1,11 @@
 import { createGlobalStyle } from "styled-components"
 import reset from "styled-reset"
-export const GlobalStyle = createGlobalStyle`
-  ${reset}
-  *, *:before, *:after {
-    box-sizing: border-box;
-  }
-  html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1rem;
-  }
-  body {
-    line-height: 1.5;
-    letter-spacing: 0;
-  }
-
-`
-export const Theme = {
-  fonts: {
-    head: "Turismo CF 900, sans-serif",
-    subhead: "Turismo CF 500, sans-serif",
+export const theme = {
+  font: {
+    head: '"TurismoCF-Heavy", sans-serif',
+    subhead: '"TurismoCF-Medium", sans-serif',
     base: "Ubuntu, sans-serif",
-    code: "Ubuntu Mono, monospace",
+    code: '"Ubuntu Mono", monospace',
   },
   colors: {
     green: "rgba(15, 169, 88, 1)",
@@ -121,3 +104,21 @@ export const Theme = {
     regular: 0,
   },
 }
+
+export const GlobalStyle = createGlobalStyle`
+  ${reset}
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: ${({ theme }) => theme.font.subhead};
+    font-size: 1rem;
+  
+  }
+  body {
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+`

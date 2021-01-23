@@ -1,9 +1,7 @@
-require('dotenv').config({
-  path: `.env`
-}
-
-);
-const config = require('gatsby-plugin-config');
+require("dotenv").config({
+  path: `.env`,
+})
+const config = require("gatsby-plugin-config")
 
 module.exports = {
   siteMetadata: {
@@ -18,6 +16,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `themes`,
+        path: `${__dirname}/src/themes`,
       },
     },
     {
@@ -58,22 +63,20 @@ module.exports = {
             options: {
               maxWidth: 1200,
             },
-        },
+          },
         ],
       },
     },
     {
       resolve: `gatsby-source-airtable`,
       options: {
-        
         apiKey: process.env.AIRTABLE_API_KEY,
         tables: [
           {
             baseId: `appIdpbS3NutGPzDp`,
             tableName: `Tools`,
-          }
+          },
         ],
-  
       },
     },
     `gatsby-transformer-sharp`,
@@ -89,18 +92,18 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
-    },  {
+    },
+    {
       resolve: "gatsby-omni-font-loader",
       options: {
-
         mode: "async",
-    
+
         /* Enable font loading listener to handle FOUT */
         enableListener: true,
-    
+
         /* Preconnect URL-s. This example is for Google Fonts */
         preconnect: ["https://fonts.gstatic.com"],
-    
+
         /* Self-hosted fonts config. Add font files and font CSS files to "static" folder */
         custom: [
           {

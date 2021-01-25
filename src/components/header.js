@@ -2,64 +2,49 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import { headBg } from "../components/elements/headbg"
+
+const HeaderWrapper = styled.header`
+  background: ${({ theme }) => theme.colors.white};
+  border-bottom: ${({ theme }) => theme.borderWidths.regular} solid
+    ${({ theme }) => theme.colors.black};
+  display: grid;
+  grid-template-areas:
+    "LogoBlock"
+    "HeaderGroup";
+  grid-template-columns: 16rem 1fr;
+  grid-gap: 0px;
+  grid-template-rows: 4rem;
+`
+const LogoBlock = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`
+
+const HeaderGroup = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`
+
+const Links = styled.div`
+  height: "5rem";
+`
+
+const SotialButtons = styled.div``
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      margin: `0 auto`,
-      width: `100%`,
-      padding: `0rem`,
-      background: `#fff`,
-      display: "flex",
-      height: `5rem`,
-      borderBottom: `2px solid #000`,
-      alignItems: `flex-start`,
-      zIndex: `100`,
-    }}
-  >
-    <div
-      className="LogoBlock"
-      style={{ justifySelf: `start`, background: `red` }}
-    >
-      LogoBlock
-    </div>
-    <nav
-      className="headerGroup"
-      style={{
-        display: `flex`,
-        justifyContent: `flex-end`,
-        alignItems: `right`,
-        padding: `1.65rem 0rem`,
-        width: `100%`,
-        align: `right`,
-      }}
-    >
-      <div
-        className="Links"
-        style={{
-          display: `grid`,
-          gridTemplateColumns: `repeat(3, auto)`,
-          gap: `2rem`,
-          padding: `0rem 2rem`,
-        }}
-      >
+  <HeaderWrapper>
+    <LogoBlock>LogoBlock</LogoBlock>
+    <HeaderGroup>
+      <Links>
         <Link to="/apps">Сервисы</Link>
         <Link to="/articles">Статьи</Link>
         <Link to="/code-kitchen">CodeKitchen</Link>
-      </div>
-      <div
-        className="sotialButtons"
-        style={{
-          align: `right`,
-          width: `200px`,
-          background: `red`,
-        }}
-      >
-        buttongroup
-      </div>
-    </nav>
-  </header>
+      </Links>
+      <SotialButtons>buttongroup</SotialButtons>
+    </HeaderGroup>
+  </HeaderWrapper>
 )
 
 Header.propTypes = {

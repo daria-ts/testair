@@ -1,13 +1,15 @@
 import styled from "styled-components"
 export const headBg = styled.header`
-  position: absolute;
-  width: 100%;
-  height: 5rem;
-  left: 0px;
-  top: 0px;
-  box-sizing: border-box;
-  background: ${({ theme }) => theme.colors.yellow};
-  border-bottom: 2px solid #000;
-  box-sizing: border-box;
-  color: ${({ theme }) => theme.colors.black};
+  margin: "0 auto";
+  /* width: "100%"; */
+  padding: "0rem";
+  background: ${({ theme }) => theme.colors.white};
+  display: "grid";
+  grid-gap: "1rem";
+  grid-template-columns: "12rem 1fr";
+  height: "5rem";
+  border-bottom: ${({ theme }) => theme.borderWidths.regular} solid
+    ${({ theme }) => theme.colors.black};
+  align-items: "flex-start";
+  z-index: ${({ theme }) => theme.zIndices.maxtop};
 `

@@ -4,43 +4,52 @@ import React from "react"
 import styled from "styled-components"
 import { headBg } from "../components/elements/headbg"
 
-const H1 = styled.h1`
-  font-size: ${({ theme }) => theme.fontSizes.sub};
-  font-family: ${({ theme }) => theme.font.head};
-  margin-top: ${({ theme }) => theme.spacings.big};
-  line-height: ${({ theme }) => theme.lineHeights.lh150};
-  color: ${({ theme }) => theme.colors.red};
-`
-
 const Header = ({ siteTitle }) => (
   <header
     style={{
       margin: `0 auto`,
       width: `100%`,
-      padding: `1.45rem 1.0875rem`,
+      padding: `0rem`,
       background: `#fff`,
       display: "flex",
       height: `5rem`,
       borderBottom: `2px solid #000`,
       alignItems: `flex-start`,
+      zIndex: `100`,
     }}
   >
-    <div style={{ justifySelf: `start`, background: `red` }}>LogoBlock</div>
-    <headerLinks
+    <div
+      className="LogoBlock"
+      style={{ justifySelf: `start`, background: `red` }}
+    >
+      LogoBlock
+    </div>
+    <nav
+      className="headerGroup"
       style={{
         display: `flex`,
-        flexDirection: `row`,
         justifyContent: `flex-end`,
         alignItems: `right`,
-        padding: `0px`,
+        padding: `1.65rem 0rem`,
         width: `100%`,
         align: `right`,
       }}
     >
-      <Link to="/apps">Сервисы</Link>
-      <Link to="/articles">Статьи</Link>
-      <Link to="/code-kitchen">CodeKitchen</Link>
-      <sotial
+      <div
+        className="Links"
+        style={{
+          display: `grid`,
+          gridTemplateColumns: `repeat(3, auto)`,
+          gap: `2rem`,
+          padding: `0rem 2rem`,
+        }}
+      >
+        <Link to="/apps">Сервисы</Link>
+        <Link to="/articles">Статьи</Link>
+        <Link to="/code-kitchen">CodeKitchen</Link>
+      </div>
+      <div
+        className="sotialButtons"
         style={{
           align: `right`,
           width: `200px`,
@@ -48,8 +57,8 @@ const Header = ({ siteTitle }) => (
         }}
       >
         buttongroup
-      </sotial>
-    </headerLinks>
+      </div>
+    </nav>
   </header>
 )
 

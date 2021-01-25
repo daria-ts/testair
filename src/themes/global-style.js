@@ -118,9 +118,8 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${({ theme }) => theme.fontSizes.base};
     color: ${({ theme }) => theme.colors.black};
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+CjxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjREJEQkRCIj48L3JlY3Q+CjxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiNEQkRCREIiPjwvcmVjdD4KPC9zdmc+");
-    background-repeat: repeat;
-  
   }
+  
   body {
     line-height: ${({ theme }) => theme.lineHeights.lh150};
     letter-spacing: ${({ theme }) => theme.letterSpacings.normal};

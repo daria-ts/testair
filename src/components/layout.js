@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GlobalStyle } from "../themes/global-style"
 import Header from "./header"
 // import "./layout.css"
-//mport { radii } from "./mixins/radii"
+//import { radii } from "./mixins/radii"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { H1, P, Circle } from "../components/elements"
+import { H1, P } from "../components/elements"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
@@ -10,9 +10,9 @@ const IndexPage = () => (
     <H1>Hi people</H1>
     <P>Welcome to your new Gatsby site.</P>
     <p>Now go build something great.</p>
-    <Circle style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
-    </Circle>
+    </div>
     <Link to="/page-2/">Go to page 2</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </>

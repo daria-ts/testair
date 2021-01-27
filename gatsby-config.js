@@ -5,9 +5,44 @@ const config = require("gatsby-plugin-config")
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Дизайн с кодом и без`,
+    description: `Figma, Airtable, Gatsby, Netlify, React – зачем дизайнеру кодить?`,
+    author: `@darrrinagym`,
+    siteLanguage: "ru",
+    socialMedia: [
+      {
+        name: "Twitter",
+        url: "https://twitter.com/darrrinagym",
+      },
+      {
+        name: "Medium",
+        url: "https://medium.com/@darrrinagym",
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/darrrinagym",
+      },
+      {
+        name: "Instagram",
+        url: "https://dev.to/darrrinagym",
+      },
+    ],
+    navLinks: {
+      menu: [
+        {
+          name: "Сервисы",
+          url: "/apps",
+        },
+        {
+          name: "Статьи",
+          url: "/articles",
+        },
+        {
+          name: "CodeKitchen",
+          url: "/code-kitchen",
+        },
+      ],
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

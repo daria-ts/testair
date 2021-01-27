@@ -24,7 +24,7 @@ module.exports = {
       },
       {
         name: "Instagram",
-        url: "https://dev.to/darrrinagym",
+        url: "https://instagram.com/darrrinagym",
       },
     ],
     navLinks: {

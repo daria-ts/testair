@@ -6,11 +6,11 @@ import styled from "styled-components"
 const Navigation = styled.nav`
   display: grid;
   grid-template-areas:
-    "Logo"
-    "HeaderGroup";
+    "LogoWrap"
+    "Navbox";
   grid-template-columns: 16rem 1fr;
   grid-gap: 0px;
-  grid-template-rows: 104px;
+  grid-template-rows: 5rem;
 `
 const Toggle = styled.div``
 const Navbox = styled.div``

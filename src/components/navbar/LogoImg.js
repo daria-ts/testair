@@ -7,8 +7,8 @@ const LogoImg = () => {
     query {
       file(name: { eq: "logo@2x" }, extension: { eq: "png" }) {
         childImageSharp {
-          fluid(maxWidth: 243, pngQuality: 80) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 243, pngQuality: 80, traceSVG: { color: "#FE1818" }) {
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

@@ -1,10 +1,17 @@
 import React, { useState } from "react"
 import NavbarLinks from "./navbar-links"
-import NavbarSotial from "./navbar-sotial"
-import Logo from "./Logo"
+import LogoWrap from "./LogoWrap"
 import styled from "styled-components"
 
-const Navigation = styled.nav``
+const Navigation = styled.nav`
+  display: grid;
+  grid-template-areas:
+    "Logo"
+    "HeaderGroup";
+  grid-template-columns: 16rem 1fr;
+  grid-gap: 0px;
+  grid-template-rows: 104px;
+`
 const Toggle = styled.div``
 const Navbox = styled.div``
 const Hamburger = styled.div``
@@ -14,7 +21,7 @@ const Navbar = () => {
 
   return (
     <Navigation>
-      <Logo />
+      <LogoWrap />
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}
@@ -24,7 +31,6 @@ const Navbar = () => {
       {navbarOpen ? (
         <Navbox>
           <NavbarLinks />
-          <NavbarSotial />
         </Navbox>
       ) : (
         <Navbox open>

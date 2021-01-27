@@ -1,9 +1,7 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import Navbar from "../components/navbar/navbar.js"
-//import { HeadLink } from "../components/elements/head-link"
+import Navbar from "../components/navbar/navbar"
 
 const HeaderWrapper = styled.header`
   background: ${({ theme }) => theme.colors.white};

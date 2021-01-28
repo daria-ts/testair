@@ -25,15 +25,13 @@ const NavItem = styled(Link)`
     content: ".";
     color: transparent;
     background: ${({ theme }) => theme.colors.red};
-    height: 1px;
+    height: 2px;
     transition: all 0.4s ease-in;
   }
 
   :hover {
     color: ${({ theme }) => theme.colors.red};
     ::after {
-    
-      padding: 2px;
       width: 100%;
     }
   }
@@ -44,16 +42,15 @@ const NavItem = styled(Link)`
     z-index: 6;
 
     :hover {
-    ::after {
-      padding: 1px 84px;
-      width: 10px;
+      ::after {
+        padding: 1px 84px;
+        width: 10px;
+      }
     }
-
-
   }
 `
 
-const NavbarLinks = () => {
+function NavbarLinks() {
   return (
     <>
       <NavItem to="/apps">Сервисы</NavItem>
